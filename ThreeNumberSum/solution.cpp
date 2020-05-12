@@ -33,7 +33,7 @@ vector<vector<int>> solve(vector<int> &arr, const int &target){
                 left++;
                 right--;
             }
-            else if(currentNum < target)
+            else if(currentSum < target)
                 left++;
             else
                 right--;
@@ -52,8 +52,6 @@ int main(){
             cout<<"\n";
         }
     }
-    else 
-        cout<<"asjhv";
     return 0;
 }
 
