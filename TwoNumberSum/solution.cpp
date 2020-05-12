@@ -2,6 +2,7 @@
 #include <vector>
 #include <utility>
 #include <unordered_map>
+#include <algorithm>
 using namespace std;
 
 /*
@@ -18,8 +19,25 @@ pair<int, int> solve(const vector<int> &arr, const int &target) {
 }
 */
 
+/*
+                Better Approach--> O(nlog(n)) time | O(1) space
+pair<int, int> solve(vector<int> &arr, const int &target) {
+    int first{}, last = arr.size()-1;
+    sort(arr.begin(), arr.end());
+    while(first < last){
+        if(arr[first] + arr[last] == target)
+            return make_pair(first, last);
+            // return make_pair(arr[first], arr[last]);
+        else if(arr[first] + arr[last] < target)
+            first++;
+        else
+            last--;
+    }
+    return make_pair(-1, -1);
+}
+*/
 
-//                Better Approach--> O(n) time | O(n) space
+//                Best Approach--> O(n) time | O(n) space
 pair<int, int> solve(const vector<int> &arr, const int &target) {
     unordered_map<int, int> available;
     int currentNum{};

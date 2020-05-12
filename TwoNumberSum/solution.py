@@ -1,5 +1,6 @@
  
 # Naive Approach--> O(n^2) time | O(1) space
+
 # def solve(arr, target):
 #     for i in range(len(arr)):
 #         for j in range(i+1, len(arr)):
@@ -8,7 +9,24 @@
 #     return None
 
 
+# Better Approach--> O(nlog(n)) time | O(1) space
+
+# def solve(arr, target):
+#     arr.sort()
+#     first = 0
+#     last = len(arr) - 1
+#     while first < last:
+#         if arr[first] + arr[last] == target:
+#             return first, last
+#         elif arr[first] + arr[last] < target:
+#             first += 1
+#         else:
+#             last -= 1
+#     return None
+
+
 #  Better Approach--> O(n) time | O(n) space
+
 def solve(arr, target):
     available = dict()
     for i in range(len(arr)):
