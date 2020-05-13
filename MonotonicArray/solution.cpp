@@ -29,6 +29,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// O(n) time | O(1) space
 bool solve(const vector<int> &arr){
     if(arr.size() < 3)
         return true;
@@ -48,6 +49,9 @@ bool solve(const vector<int> &arr){
     return true;
 }
 
+
+
+// O(n) time | O(1) space (much simpler version)
 bool solve2(const vector<int> &arr){
     bool isIncreasing  = true;
     bool isDecreasing = true;
