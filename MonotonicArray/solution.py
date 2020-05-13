@@ -42,4 +42,17 @@ def solve(arr):
             return False
     return True
 
-print(solve([1,1,1]))
+
+
+# O(n) time | O(1) space (much simpler version)
+def solve2(arr):
+    isIncreasing = True
+    isDecreaing = True
+
+    for i in range(1, len(arr)):
+        if arr[i] - arr[i-1] > 0:
+            isDecreaing = False
+        elif  arr[i] - arr[i-1] < 0:
+            isIncreasing = False
+
+    return isIncreasing or isDecreaing
