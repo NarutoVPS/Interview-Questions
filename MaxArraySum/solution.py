@@ -26,3 +26,21 @@ def solve(arr):
     return maxSum[len(maxSum)-1]
 
 
+
+# O(n) time | O(1) space
+def solve2(arr):
+    if len(arr) == 0:
+        return
+    if len(arr) == 1:
+        return arr[0]
+    previous = arr[0]
+    currentWithAddition = max(arr[0], arr[1])
+    maxSum = 0
+    for i in range(2, len(arr)):
+        currentWithAddition += arr[i]
+        maxSum = max(previous, currentWithAddition)
+        currentWithAddition = previous
+        previous = maxSum
+    return maxSum
+
+
