@@ -18,6 +18,10 @@ using namespace std;
 
 // O(n) time | O(n) space
 int solve(const vector<int> &arr){
+    if(!arr.size())
+        return 0;
+    if(arr.size()==1)
+        return arr[0];
     vector<int> maxSum {arr};
     maxSum[1] = (arr[0] > arr[1])? arr[0]: arr[1];
     for(int i{2}; i<maxSum.size(); i++){
@@ -25,5 +29,6 @@ int solve(const vector<int> &arr){
     }
     return maxSum[maxSum.size()-1];
 }
+
 
 
