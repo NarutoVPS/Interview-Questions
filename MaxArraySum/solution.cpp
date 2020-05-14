@@ -32,3 +32,23 @@ int solve(const vector<int> &arr){
 
 
 
+// O(n) time | O(1) space
+int solve2(const vector<int> &arr){
+    if(!arr.size())
+        return 0;
+    if(arr.size()==1)
+        return arr[0];
+    
+    int maxSum{};
+    int previous = arr[0];
+    int currentWithAddition = max(arr[0], arr[1]);
+    for(int i{2}; i<arr.size(); i++){
+        currentWithAddition += arr[i];
+        maxSum = max(previous, currentWithAddition);
+        currentWithAddition = previous;
+        previous = maxSum;
+    }
+    return maxSum;
+}
+
+
