@@ -24,6 +24,7 @@
 
 using namespace std;
 
+// O(n) time | O(n) space
 vector<int> solve(const vector<vector<int>> &arr){
     vector<int> ans;
     int rowStart{}, colStart{};
