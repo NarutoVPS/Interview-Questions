@@ -27,6 +27,10 @@ using namespace std;
 // O(n) time | O(n) space
 vector<int> solve(const vector<vector<int>> &arr){
     vector<int> ans;
+    if(arr.size() < 1)
+            return ans;
+    if(arr.size() == 1)
+        return arr[0];
     int rowStart{}, colStart{};
     int rowEnd = arr.size() - 1;
     int colEnd = arr[0].size() - 1;
