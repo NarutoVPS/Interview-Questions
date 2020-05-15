@@ -23,6 +23,10 @@
 # O(n) time | O(n) space
 def solve(arr):
     ans = []
+    if len(arr) < 1:
+        return ans
+    if len(arr) == 1:
+        return arr[0]
     rowStart, rowEnd = 0, len(arr) - 1
     colStart, colEnd = 0, len(arr[0]) - 1
 
