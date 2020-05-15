@@ -56,7 +56,7 @@ bool solve2(const vector<int> &arr){
     bool isIncreasing  = true;
     bool isDecreasing = true;
 
-    for(int i{}; i<arr.size(); i++){
+    for(int i{1}; i<arr.size(); i++){
         if(arr[i] - arr[i-1] > 0)
             isDecreasing = false;
         else if (arr[i] - arr[i-1] < 0)
