@@ -5,25 +5,15 @@
     More formally a subarray [a1, a2, a3 … aN] is said to be in form of a mountain if there exist an integer K, 1 <= K <= N such that,
     a1 <= a2 <= a3 .. <= aK >= a(K+1) >= a(K+2) …. >= aN
 
-    Examples:
-        Input : Arr[]  = [2 3 2 4 4 6 3 2], Range = [0, 2]
-        Output :  Yes
+    Example 1:
+        Input: [2,1,4,7,3,2,5]
+        Output: 5
+        Explanation: The largest mountain is [1,4,7,3,2] which has length 5.
 
-        Explanation: The output is yes , subarray is [2 3 2], 
-        so subarray first increases and then decreases
-
-        Input:  Arr[] = [2 3 2 4 4 6 3 2], Range = [2, 7]
-        Output: Yes
-
-        Explanation: The output is yes , subarray is [2 4 4 6 3 2], 
-        so subarray first increases and then decreases
-
-
-        Input: Arr[]= [2 3 2 4 4 6 3 2], Range = [1, 3]
-        Output: no
-
-        Explanation: The output is no, subarray is [3 2 4], 
-        so subarray is not in the form above stated
+    Example 2:
+        Input: [2,2,2]
+        Output: 0
+        Explanation: There is no mountain.
 */
 
 #include <bits/stdc++.h>
