@@ -21,26 +21,33 @@ using namespace std;
 
 // O(n) time | O(1) space
 int solve(const vector<int> &arr){
+    // if the length of arr is less than 3, no peak exists
     if(arr.size() < 3)
         return 0;
 
     int maxPeak{}, current{1};
 
+    // traverse through the array
     while(current < arr.size()-1){
+        // check if current element is a peak
         if(arr[current] - arr[current-1] > 0 && arr[current] - arr[current+1] > 0){
             int count{1}, i{current};
+            // count the elements that are decreasing at left side of the peak
             while(i > 0 && arr[i] - arr[i-1] > 0){
                 count++;
                 i--;
             }
 
             i = current;
+            // count the elements that are decreasing at right side of the peak
             while(i < arr.size()-1 && arr[i] - arr[i+1] > 0){
                 count++;
                 i++;
             }
+            // continue traversing the array from the end of the current peak
             current = i;
-
+            
+            // if the length of current peak is greater than maxPeak, update maxPeak
             maxPeak = max(maxPeak, count);
         }
         else
