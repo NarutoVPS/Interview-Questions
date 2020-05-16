@@ -33,7 +33,6 @@ int solve(const vector<int> &arr){
     if(arr.size() < 3)
         return 0;
 
-    vector<int> peaks{}; 
     int maxPeak{}, current{1};
 
     while(current < arr.size()-1){
