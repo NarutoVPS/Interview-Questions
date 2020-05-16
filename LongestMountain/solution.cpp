@@ -38,13 +38,13 @@ int solve(const vector<int> &arr){
     while(current < arr.size()-1){
         if(arr[current] - arr[current-1] > 0 && arr[current] - arr[current+1] > 0){
             int count{1}, i{current};
-            while((arr[i] - arr[i-1] > 0) && (i > 0)){
+            while(i > 0 && arr[i] - arr[i-1] > 0){
                 count++;
                 i--;
             }
 
             i = current;
-            while((arr[i] - arr[i+1] > 0) && (i < arr.size()-1)){
+            while(i < arr.size()-1 && arr[i] - arr[i+1] > 0){
                 count++;
                 i++;
             }
