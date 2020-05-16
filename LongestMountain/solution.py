@@ -16,6 +16,7 @@
         Explanation: There is no mountain.
 '''
 
+# O(n) time | O(1) space
 def solve(arr):
     if len(arr) < 3:
         return 0
