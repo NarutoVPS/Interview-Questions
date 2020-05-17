@@ -8,8 +8,10 @@ class BST {
         BST *right = NULL;
 
     public:
-        BST (const int data){
-            this->data = data;
+        BST(): data(0), left(NULL), right(NULL){}
+        
+        BST (const int tempdata){
+            this->data = tempdata;
         }
 
         BST *insert(const int data){
