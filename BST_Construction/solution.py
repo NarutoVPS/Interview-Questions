@@ -15,7 +15,7 @@ class BST:
                     currentNode = currentNode.right
 
             else:
-                if currentNode.left = None:
+                if currentNode.left == None:
                     currentNode.left = BST(data)
                     break
                 else:
