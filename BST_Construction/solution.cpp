@@ -11,7 +11,8 @@ class BST {
         BST(): data(0), left(NULL), right(NULL){}
         
         BST (const int tempdata){
-            this->data = tempdata;
+            data = tempdata;
+            left = right = NULL;
         }
 
         BST *insert(const int data){
