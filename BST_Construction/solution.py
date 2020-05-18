@@ -46,8 +46,11 @@ class BST:
         return False
 
 def inorder(root):
+    # check if current node is None
     if root:
+        # recursively print all the data from left nodes first
         inorder(root.left)
         print(root.data)
+        # recursively print all the data from right nodes
         inorder(root.right)
 
