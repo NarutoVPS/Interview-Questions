@@ -44,3 +44,10 @@ class BST:
                 currentNode = currentNode.right
         # return false if not found
         return False
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.data)
+        inorder(root.right)
+
