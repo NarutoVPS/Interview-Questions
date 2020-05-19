@@ -10,6 +10,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// O(n) time | O(1) space
 int solve(const vector<int> &arr){
     if (!arr.size())
         return 0;

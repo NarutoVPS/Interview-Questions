@@ -7,6 +7,7 @@
         Explanation: [4,-1,2,1] has the largest sum = 6.
 '''
 
+# O(n) time | O(1) space
 def solve(arr):
     if not len(arr):
         return 0
