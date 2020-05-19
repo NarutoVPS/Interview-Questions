@@ -7,11 +7,10 @@ int solve(const vector<int> &arr){
     if (arr.size() == 1)
         return arr[0];
     
-    int maxSum{INT_MIN}, currentSum{arr[0]};
+    int maxSum{arr[0]}, currentSum{arr[0]};
     for(int i{1}; i<arr.size(); i++){
-        currentSum = max(currentSum, arr[i]);
-        if (currentSum > maxSum)
-            maxSum = currentSum;
+        currentSum = max(currentSum + arr[i], arr[i]);
+        maxSum = max(maxSum, currentSum);
     }
 
     return maxSum;
