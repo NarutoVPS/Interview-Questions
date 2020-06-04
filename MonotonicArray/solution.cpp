@@ -62,5 +62,5 @@ bool solve2(const vector<int> &arr){
         else if (arr[i] - arr[i-1] < 0)
             isIncreasing = false;
     }
-    return true;
+    return isIncreasing || isDecreasing;
 }
