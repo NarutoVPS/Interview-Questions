@@ -1,3 +1,22 @@
+/*
+    In mathematics, the Fibonacci series is defined by the following recurrence relation:
+    F(0) = 0
+    F(1) = 1
+
+    F(n) = F(n-1) + F(n-2)
+
+    i.e. nth element is formed by adding elements at (n-1) and (n-2)
+    So, first 10 fibonacci numbers will be:
+        0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+    Given a number n, find F(n).
+    Example:
+        Input: 6
+        Output: 8
+        Input: 10
+        Output: 55
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
