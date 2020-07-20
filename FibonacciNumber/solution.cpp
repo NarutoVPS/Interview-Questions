@@ -12,7 +12,7 @@ long long solve(int n) {
 
 // O(n) Time | O(n) Space
 long long solve2(int n) {
-    unordered_map<int, long long> cache{};
+    static unordered_map<int, long long> cache{};
     cache[1] = 1;
     cache[2] = 1;
 
