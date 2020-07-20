@@ -25,3 +25,18 @@ long long solve2(int n) {
         return cache[n];
     }
 }
+
+// O(n) Time | O(1) Space
+long long solve3(int n) {
+    vector<long long> previous = {1, 1};
+    int i = 3;
+
+    while (i <= n) {
+        long long next = previous[0] + previous[1];
+        previous[0] = previous[1];
+        previous[1] = next;
+        i++;
+    }
+
+    return n > 1 ? previous[1] : previous[0];
+}
